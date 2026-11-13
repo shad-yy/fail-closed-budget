@@ -1,0 +1,29 @@
+{
+  "name": "fail-closed-budget",
+  "version": "0.1.0",
+  "description": "Outbound API budgets that keep refusing calls when the shared store and the cache are down, instead of letting every request through.",
+  "license": "MIT",
+  "author": "Chadi Choukkah",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "mutation": "stryker run"
+  },
+  "devDependencies": {
+    "@stryker-mutator/core": "^10.1.1",
+    "@stryker-mutator/vitest-runner": "^10.1.1",
+    "@vitest/coverage-v8": "^5.1.0",
+    "fast-check": "^4.0.0",
+    "typescript": "^5.7.2",
+    "vitest": "^5.1.0"
+  }
+}
