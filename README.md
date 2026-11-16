@@ -66,7 +66,7 @@ try {
 
 - **Example tests** for both layers and the guard, including the case the package exists for. With the store down and the shared quota failing open, 10 calls against a ceiling of 3 make exactly 3 upstream calls.
 - **Property tests** (fast-check). For random limits, windows and call timings, every decision matches a small reference model of a fixed window, and the first call after an idle window is always allowed.
-- **Mutation testing** (Stryker): it changes the code on purpose and checks that a test fails each time. CI fails below 90%. The score and the HTML report come from the latest CI run, not from this file.
+- **Mutation testing** (Stryker): it changes the code on purpose and checks that a test fails each time. CI fails below 90%. First CI run (16 Nov 2026): **100%**, 131 of 131 mutants killed ([run log](https://github.com/shad-yy/fail-closed-budget/actions/runs/43982498278)). Every later run prints its score in the run summary and attaches the HTML report as `mutation-report`.
 
 ```sh
 npm ci
